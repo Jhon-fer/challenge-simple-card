@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -7,11 +7,152 @@
 }
 html {
   font-size: 62.5%;
-  background-color: hsl(30, 38%, 92%);
+  font-family: 'Overpass', sans-serif;
+  background-color: hsl(216, 12%, 8%);
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+.card-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 325px;
+  max-width: 325px;
+}
+.card-rating.noActive {
+  display: none;
+}
+.card-rating-container {
+  padding: 25px;
+  width: 325px;
+  height: auto;
+  border-radius: 15px;
+  background-color: hsl(213, 19%, 18%);
+}
+.card-rating-container.active {
+  display: none;
+}
+.card-rating-container img {
+  margin-bottom: 20px;
+  padding: 11px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  background-color: hsla(216, 12%, 54%, 0.1);
+}
+.card-rating-container h1 {
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: hsl(0, 0%, 100%);
+}
+.card-rating-container p {
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: hsl(217, 12%, 63%);
+}
+.card-rating-number__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  list-style: none;
+}
+.card-rating-number__list--score {
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all .5s;
+  color: hsl(216, 12%, 54%);
+  background-color: hsla(216, 12%, 54%, 0.1);
+}
+.card-rating-number__list--score:hover {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(217, 12%, 63%);
+}
+.card-rating-number__list--score:focus {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(25, 97%, 53%); 
+}
+.submit {
+  padding: 10px;
+  width: 100%;
+  font-size: 1.2rem;
+  letter-spacing: .15rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all .5s;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(25, 97%, 53%);
+}
+.submit:hover {
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(0, 0%, 100%);
+}
+.item.active {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(25, 97%, 53%);
 }
 
+/****************THANK YOU******************/
+.card-sent {
+  display: none;
+  align-items: center;
+  margin: 0 auto;
+  width: 325px;
+  max-width: 325px;
+  height: 80vh;
+}
+.card-sent.active {
+  display: flex;
+}
+.card-sent-container {
+  padding: 30px;
+  width: 325px;
+  height: auto;
+  text-align: center;
+  border-radius: 15px;
+  background-color: hsl(213, 19%, 18%);
+}
+.card-sent--image {
+  margin-bottom: 20px;
+}
+.card-sent h1 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: 400;
+  color: white;
+}
+.card-sent--text {
+  font-size: 1.2rem;
+  color: hsl(216, 12%, 54%);
+}
+.card-sent--rating {
+  margin: 0 auto 30px auto;
+  padding: 5px 20px;
+  width: 62.5%;
+  font-size: 1.2rem;
+  font-size: 400;
+  border-radius: 50px;
+  color: hsl(25, 97%, 53%);
+  background-color: hsla(216, 12%, 54%, 0.1);
+}
 
 /*attribution*/
 .attribution {
+  position: absolute;
+  bottom: 0;
   padding: 20px 0;
+  width: 100%;
+  color: aliceblue;
 }
